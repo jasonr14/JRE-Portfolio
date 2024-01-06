@@ -1,4 +1,399 @@
-html {
-  height: 100%;
+/* ======================================
+  CSS Reset
+  https://dev.to/hankchizljaw/a-modern-css-reset-6p3
+  Box sizing rules
+========================================= */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+  ul[class],
+  ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul {
+  margin: 0;
+}
+
+/* core body defaults */
+body {
+  font-family: monospace; /* new font */
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* strip all pre-defined css rules  */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: monospace; 
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem; 
+  font-weight: bolder;
+}
+
+.text-alignment-center {
+  text-align: center;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #868C79;
+    border: 1px solid #B7BFA4;
+    margin: 10px;
+    display: inline-block;
+    text-align: center; 
+    line-height: 100px; 
+    border-radius: 50%;
+}
+#hero {
+  background-image: url("https://i.imgur.com/E7EstG6.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   width: 100%;
+  height: 80vh;
+  display: flex;
+}
+
+#hero-text {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  margin: auto;
+  width: 600px;
+  padding: 10px;
+  flex-direction: column;
+}
+
+/*=========================================
+  Hamburger Icon Styles START
+/* ======================================*/ 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute; 
+  top: 10px;  
+  right: 20px; 
+  z-index: 1;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+
+/*=========================================
+  Hamburger Icon Styles END
+/* ======================================*/ 
+
+#navbar {
+  background-color: #344E41; 
+   }
+/* .navbar-nav {
+  background-color: #344E41; */
+}
+#navbar a {
+  font-size: 1.2em;
+}
+#navbar ul {
+  list-style: none;
+  display: flex; 
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#navbar li {
+  margin: 0 10px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: ;white;
+  font-weight: bold;
+}
+#about {
+  background-color: white; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#about h1 {
+  font-size: 2em;
+}
+
+#skills {
+  background-color: #588157; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#skills h1 {
+  font-size: 2em;
+}
+#casestudy {
+  background: #A3B18A; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+}
+
+#casestudy-text {
+  align-items: center; 
+}
+#casestudy h1 {
+  font-size: 2em;
+}
+
+#casestudy-image img {
+  max-width: 300px;
+}
+/* Footer CSS */
+
+.footer {
+  background-color: #151515;
+  padding: 80px;
+  display: flex;
+  justify-content: left;
+}
+
+footer-container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+/* .row {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+ul {
+  list-style: none;
+}
+
+.footer-col {
+  /* display: flex; */
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col ul {
+  padding-left: 0px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #FFF;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  width: 50px;
+  heiht: 2px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  color: #DDD;
+  display: block;
+  font-size: 1rem;
+  front-weigth: 300;
+  text-tramsform: capitalize;
+  text-decoration: none;
+  transiton: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #FFF;
+  paddding-left: 7px;
+}
+.footer-col .social-links a {
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  transiton: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #151515;
+  background-color: #FFF;
+}
+@media(max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+/*=========================================
+  Plant Identifier browse button
+/* ======================================*/ 
+.custom-file {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.custom-file-label {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #0F6EFD;
+  border-radius: 0.35rem;
+  display: flex;
+  align-items: center;
+}
+
+.custom-file-label::after {
+  content: "Upload";
+}
+
+.custom-file-input:valid + .custom-file-label::after {
+  content: "File uploaded!";
+}
+
+.custom-file-input:focus + .custom-file-label,
+.custom-file-input.has-focus + .custom-file-label {
+  border-color: red;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/*=========================================
+    Media Queries
+/* ======================================
+    Breakpoint	        Purpose
+    (default)	          Mobile-portrait
+    max-width: 576px	  Mobile-landscape (and larger)
+    max-width: 768px	  Tablet-portrait (and larger)
+    max-width: 992px	  Tablet-landscape (and larger)
+    max-width: 1200px	  Laptops (and larger)
+    max-width: 1400px	  Laptops (and larger)
+========================================= */
+
+@media all and (max-width: 576px) {
+  #about {
+    background-color: #5d8aa8;
+    color: black;
+  }
+}
+@media all and (max-width: 768px) {
+  #skills {
+    background-color: #367588;
+    color: black; 
+  }
+  .menu-toggle {
+    display: flex;
+  } 
+  #navbar ul {
+    display: none;
+    background-color: white;
+    flex-direction: row; 
+    text-align: center; 
+    position: absolute; 
+    top: 60px; 
+    right: 0; 
+    z-index: 1; 
+  }
+  #navbar a {
+    color: black;
+  }
+  #navbar ul.active {
+    display: flex; 
+  }
+}
+
+@media all and (max-width: 992px) {
+  #contact {
+    /* background-color: #2f4f4f; */
+    color: black;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  #footer {
+    background-color: 	#004242;
+    color: black;
+  }
 }
